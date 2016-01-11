@@ -1,0 +1,19 @@
+.head{height:80px; padding:20px; background-color: #e5e5e5;}
+.head h1{float: left; line-height: 40px; font-size:30px; text-align: center;}
+.head a{float:right; height:40px; line-height: 40px; margin-left:20px; padding:0 20px; font-size:24px; color:#fff; background-color:#39c; border-radius:5px; cursor:pointer;}
+
+
+h2 {font-size: 22px; line-height: 40px; font-weight: 700; border-bottom: 2px solid #555; margin-top: 20px; color: #219; }
+
+.u-btn{width:100%; height:40px; line-height: 40px; text-align: center; background-color: #39c; border:none; border-radius:3px; outline:none; color:#fff; cursor:pointer;}
+
+.m-demo{padding-top:5px;}
+.m-demo li{padding:5px;}
+@media (min-width: 768px){
+	.m-demo li{padding:10px;}
+	.m-demo{padding-top:10px;}
+}
+@media (min-width: 992px){
+	.m-demo li{padding:15px;}
+	.m-demo{padding-top:15px;}
+}

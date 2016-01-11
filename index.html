@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<title>Amsg | Popup 弹出框 | Alert 警告框 | Confirm 确认框</title>
+<meta name="keywords" content="Amsg,Popup弹出框,Alert警告框,Confirm确认框" />
+<meta name="description" content="Amsg插件提供Popup弹出框、Alert警告框、Confirm确认框的各种场景的展示效果和样式" />
+<link href="themes/css/acss.css" rel="stylesheet"/>
+<link href="themes/css/style.css" rel="stylesheet"/>
+<link href="themes/css/default.css" rel="stylesheet"/>
+<script src="themes/js/jquery-2.1.1.min.js"></script>
+<script src="themes/js/jquery.amsg-1.0.js"></script>
+</head>
+<body>
+    <div class="w">
+        <div class="head c">
+            <h1>AMSG</h1>
+            <a href="themes/js/jquery.mobile.amsg-1.0.js">jQuery Mobile版本下载</a>
+            <a href="themes/js/jquery.amsg-1.0.js">jQuery版本下载</a>
+            <a href="themes/css/default.css">CSS下载</a>
+            <a onclick="$.amsg.a('使用方法','1.引入JS、CSS文件<br/>2.查看DEMO按钮的onclick，或者鼠标悬停在DEMO按钮上')">使用方法</a>
+        </div>
+        <h2>Popup 弹出框</h2>
+        <ul class="c x06 s04 m03 xs010 ss020 ms030 m-demo">
+            <li class="g">
+                <button class="u-btn" onclick="$.amsg.p('成功清空购物车');" title="$.amsg.p('成功清空购物车');">Popup 正常</button>
+            </li>
+            <li class="g">
+                <button class="u-btn" onclick="$.amsg.p('密码修改成功','n-correct');" title="$.amsg.p('密码修改成功','n-correct');">Popup 正确</button>
+            </li>
+            <li class="g">
+                <button class="u-btn" onclick="$.amsg.p('请不要平凡操作','n-warn');" title="$.amsg.p('请不要平凡操作','n-warn');">Popup 警告</button>
+            </li>
+            <li class="g">
+                <button class="u-btn" onclick="$.amsg.p('系统出现错误','n-error');" title="$.amsg.p('系统出现错误','n-error');">Popup 错误</button>
+            </li>
+            <li class="g">
+                <button class="u-btn" onclick="$.amsg.p('正在加载中...','n-load a-circle',60000);setTimeout(function(){$('.m-amsg').remove()},3000);/*setTimeout模拟加载后的效果*/" title="$.amsg.p('正在加载中...','n-load a-circle',60000);setTimeout(function(){$('.m-amsg').remove()},3000);/*setTimeout模拟加载后的效果*/">Popup 加载</button>
+            </li>
+            <li class="g">
+                <button class="u-btn" onclick="$.amsg.p('2秒后关闭','',2000);" title="$.amsg.p('2秒后关闭(默认是1秒)','',2000);">Popup 2秒关闭</button>
+            </li>
+            <li class="g">
+                <button class="u-btn" onclick="$.amsg.p({left:'标题左对齐'});" title="$.amsg.p({left:'标题左对齐'});">标题左对齐</button>
+            </li>
+            <li class="g">
+                <button class="u-btn" onclick="$.amsg.p({center:'标题默认是居中'});" title="$.amsg.p({center:'标题默认是居中'});">标题居中(默认)</button>
+            </li>
+            <li class="g">
+                <button class="u-btn" onclick="$.amsg.p({auto:'自动(单行居中)'});" title="$.amsg.p({auto:'自动(单行居中)'});">自动(单行居中)</button>
+            </li>
+            <li class="g">
+                <button class="u-btn" onclick="$.amsg.p({auto:'如果标题很短就会居中显示，如果标题很长就会左对齐显示。'},'n-warn',5000);" title="$.amsg.p({auto:'如果标题很短就会居中显示，如果标题很长就会左对齐显示。'},'n-warn',5000);">自动(多行左对齐)</button>
+            </li>
+        </ul>
+        <h2>Alert 警告框</h2>
+        <ul class="c x06 s04 m03 xs010 ss020 ms030 m-demo">
+            <li class="g">
+                <button class="u-btn" onclick="$.amsg.a('警告框标题','警告框警告的内容',function(){alert('我是被执行的回调函数');})" title="$.amsg.a('警告框标题','警告框警告的内容',function(){alert('我是被执行的回调函数');})">Alert 正常</button>
+            </li>
+            <li class="g">
+                <button class="u-btn" onclick="$.amsg.a('警告框标题','',function(){alert('我是被执行的回调函数');})" title="$.amsg.a('警告框标题','',function(){alert('我是被执行的回调函数');})">Alert 空内容</button>
+            </li>
+            <li class="g">
+                <button class="u-btn"  onclick="$.amsg.a('','警告框警告的内容',function(){alert('我是被执行的回调函数');})" title="$.amsg.a('','警告框警告的内容',function(){alert('我是被执行的回调函数');})">Alert 空标题</button>
+            </li>
+            <li class="g">
+                <button class="u-btn" onclick="$.amsg.a({left:'警告框标题'},'警告框警告的内容',function(){alert('我是被执行的回调函数');})" title="$.amsg.a({left:'警告框标题'},'警告框警告的内容',function(){alert('我是被执行的回调函数');})">标题左对齐</button>
+            </li>
+            <li class="g">
+                <button class="u-btn" onclick="$.amsg.a('警告框标题',{center:'警告框警告的内容'},function(){alert('我是被执行的回调函数');})" title="$.amsg.a('警告框标题',{center:'警告框警告的内容'},function(){alert('我是被执行的回调函数');})">内容居中</button>
+            </li>
+            <li class="g">
+                <button class="u-btn" onclick="$.amsg.a('警告框标题',{auto:'如果很短就会居中显示，如果很长就会左对齐显示。'},function(){alert('我是被执行的回调函数');})" title="$.amsg.a('警告框标题',{auto:'如果很短就会居中显示，如果很长就会左对齐显示。'},function(){alert('我是被执行的回调函数');})">内容自动对齐</button>
+            </li>
+            <li class="g">
+                <button class="u-btn" onclick="$.amsg.a('警告框标题','警告框警告的内容',function(){alert('我是被执行的回调函数');},{confirm:'新按钮'})" title="$.amsg.a('警告框标题','警告框警告的内容',function(){alert('我是被执行的回调函数');},{confirm:'新按钮'})">修改按钮文案</button>
+            </li>
+            <li class="g">
+                <button class="u-btn" onclick="$.amsg.a('警告框标题','警告框警告的内容')" title="$.amsg.a('警告框标题','警告框警告的内容')">取消回调函数</button>
+            </li>
+            <li class="g">
+                <button class="u-btn" onclick="$.amsg.a('警告框标题','1.第一行<br/>2.第二行<br/>3.第三行')" title="$.amsg.a('警告框标题','1.第一行<br/>2.第二行<br/>3.第三行')">换行技巧</button>
+            </li>
+            <li class="g">
+                <button class="u-btn" onclick="$.amsg.a('刷新',{auto:'你执行了删除操作必须刷新后才可以看到最新效果'},function(){location.reload(true);})" title="$.amsg.a('刷新',{auto:'你执行了删除操作必须刷新后才可以看到最新效果'},function(){location.reload(true);})">回调刷新本页面</button>
+            </li>
+        </ul>
+        <h2>Confirm 确认框</h2>
+        <ul class="c x06 s04 m03 xs010 ss020 ms030 m-demo">
+            <li class="g">
+                <button class="u-btn" onclick="$.amsg.c('确认框标题','确认框确认的内容',function(){alert('我是被执行的回调函数');})" title="$.amsg.c('确认框标题','确认框确认的内容',function(){alert('我是被执行的回调函数');})">Confiorm 正常</button>
+            </li>
+            <li class="g">
+                <button class="u-btn" onclick="$.amsg.c('确认框标题','',function(){alert('我是被执行的回调函数');})" title="$.amsg.c('确认框标题','',function(){alert('我是被执行的回调函数');})">Alert 空内容</button>
+            </li>
+            <li class="g">
+                <button class="u-btn" onclick="$.amsg.c('','确认框确认的内容',function(){alert('我是被执行的回调函数');})" title="$.amsg.c('','确认框确认的内容',function(){alert('我是被执行的回调函数');})">Alert 空标题</button>
+            </li>
+            <li class="g">
+                <button class="u-btn" onclick="$.amsg.c({left:'确认框标题'},'确认框确认的内容',function(){alert('我是被执行的回调函数');})" title="$.amsg.c({left:'确认框标题'},'确认框确认的内容',function(){alert('我是被执行的回调函数');})">标题左对齐</button>
+            </li>
+            <li class="g">
+                <button class="u-btn" onclick="$.amsg.c('确认框标题',{center:'确认框确认的内容'},function(){alert('我是被执行的回调函数');})" title="$.amsg.c('确认框标题',{center:'确认框确认的内容'},function(){alert('我是被执行的回调函数');})" >内容居中</button>
+            </li>
+            <li class="g">
+                <button class="u-btn" onclick="$.amsg.c('确认框标题',{auto:'如果很短就会居中显示，如果很长就会左对齐显示。'},function(){alert('我是被执行的回调函数');})" title="$.amsg.c('确认框标题',{auto:'如果很短就会居中显示，如果很长就会左对齐显示。'},function(){alert('我是被执行的回调函数');})">内容自动对齐</button>
+            </li>
+            <li class="g">
+                <button class="u-btn" onclick="$.amsg.c('确认框标题','确认框确认的内容',function(){alert('我是被执行的回调函数');},{cancle:'新取消',confirm:'新确认'})" title="$.amsg.c('确认框标题','确认框确认的内容',function(){alert('我是被执行的回调函数');},{cancle:'新取消',confirm:'新确认'})">修改按钮文案</button>
+            </li>
+            <li class="g">
+                <button class="u-btn" onclick="$.amsg.c('打开ACSS','你确定打开http://acss.aoove.com吗',function(){location.href='http://acss.aoove.com';})" title="$.amsg.c('打开ACSS','你确定打开http://acss.aoove.com吗',function(){location.href='http://acss.aoove.com';})">回调打开ACSS</button>
+            </li>
+        </ul>
+    </div>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?9063529d31a04c65a25ff1ffa441c30f";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</body>
+</html>

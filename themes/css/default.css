@@ -1,0 +1,49 @@
+/*http://amsg.aoove.com/*/
+.m-amsg{position: fixed; top:0; left:0; width:100%; height:100%; z-index: 3;}
+.m-amsg .p-wrap{position: relative; height:100%;}
+.m-amsg .p-backdrop{position: absolute; top:0; left:0; width:100%; height:100%; background-color: rgba(0,0,0,.5);}
+.m-amsg .p-content{ overflow: hidden; position: absolute; bottom:50%; left:50%; width:270px; margin-left:-135px; background-color: #f2f2f2; border-radius:5px;}
+.m-amsg .p-header{ line-height: 20px; margin-top:12px; padding:0 12px; font-size:16px; font-weight: 700; text-align: center;}
+.m-amsg .p-body{ margin-top:12px; padding:0 12px; font-size:12px; line-height: 16px;}
+.m-amsg .p-footer{height:45px; margin-top: 12px; border-top:1px solid #e5e5e5; line-height: 44px; }
+.m-amsg .p-footer a{float:left; width:50%; font-size:15px; text-align: center; color:#2590eb; cursor:pointer;}
+.m-amsg .p-footer a:first-child{border-right:1px solid #e5e5e5;}
+.m-amsg .p-footer a:only-child{width:100%; border-right: none;}
+.m-amsg .p-footer a:active{background-color:#2590eb; color:#fff;}
+.m-amsg .p-popup{ padding:12px; background-color: rgba(0,0,0,.9); }
+.m-amsg .p-popup i{display: block; width:30px; height:30px; margin:6px auto; background:url(../img/icon.png) no-repeat; background-size:180px 30px;}
+.m-amsg .p-popup i.n-warn{background-position: -50px 0;}
+.m-amsg .p-popup i.n-error{background-position: -100px 0;}
+.m-amsg .p-popup i.n-load{background-position: -150px 0;}
+.m-amsg .p-popup p{ padding:5px 0; line-height: 20px; text-align: center; font-size:15px; color:#fff;}
+/*扩展 加载图标的旋转CSS3动画*/
+@-webkit-keyframes a-circle
+{
+    0%  {
+        -webkit-transform:rotate(0deg);
+         transform:rotate(0deg);
+    }
+    100%{
+        -webkit-transform:rotate(360deg);
+        transform:rotate(360deg);
+    }
+}
+@keyframes a-circle
+{
+    0%  {
+        -webkit-transform:rotate(0deg);
+         transform:rotate(0deg);
+    }
+    100%{
+        -webkit-transform:rotate(360deg);
+        transform:rotate(360deg);
+    }
+}
+.a-circle{
+  -webkit-animation: a-circle .5s;
+  animation: a-circle .5s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: cubic-bezier(0, 0, 0, 0);
+  animation-timing-function: cubic-bezier(0, 0, 0, 0);
+}
